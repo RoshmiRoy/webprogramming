@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+enter the character: <input type="text" id="myText">
+<p id="b"></p>
+<button onclick="myFunction()">try it</button>
+<script>
+function myFunction()
+{
+ var str1=document.getElementById("myText").value;
+if (str1.substring(0, 2) === 'py' || str1.substring(0, 2) === 'py')
+{
+document.getElementById("b").innerHTML = str1;
+}
+else
+{
+document.getElementById("b").innerHTML = "py"+str1;
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+enter the first number: <input type="text" id="myText1"><br>
+
+enter the second number: <input type="text" id="myText2"><br>
+enter the third number: <input type="text" id="myText3"><br>
+
+<button onclick ="myFunction()">find</button>
+<p id="b"></p>
+<script>
+function myFunction()
+{
+var a = document.getElementById("myText1").value;
+var t = document.getElementById("myText2").value;
+
+var s = document.getElementById("myText3").value;
+
+if( s > a && a> s)
+{
+document.getElementById("b").innerHTML = a + "is the largerst";
+}
+else if (s > a && s > t)
+{
+document.getElementById("b").innerHTML =s + "is the largest";
+}
+else
+{
+document.getElementById("b").innerHTML = t + "is the largest";
+}
+}
+</script>
+</body>
+</html>
