@@ -1,31 +1,45 @@
-
-
-
 <html>
-<head>
-<title>insert data in form</title>
-</head>
+<head></head>
 <body>
-<form action = "get.php" method = "POST">
-form no.:
-<input type = "text" name = "txtr_no">
-<br><br>
-Name:
-<input type = "text" name = "txtname">
-<br><br>
+<div align="center">
+<h1 style="text-align:center"><u>Insert Data</u></h1>
+<form method="post" action="stu.php" >
+<input type="text" name="name" >
 
-Address:
-<textarea name = "add" type = "textarea"></textarea>
-<br><br>
-Contact No:
-<input type = "text" name = "txtc_no">
-<br><br>
-Email ID:
-<input type = "text" name = "txteid">
-<br><br>
-<input type = "Submit" name = "insert" value = "Save">
-<input type = "Reset" value = "clear">
-</form>
+<input type="text" name="branch" >
+<input type="submit" value="submit" name="submit">
+
+</div>
+<div align="center">
+
+</div>
+<?php
+$con=mysqli_connect("localhost","20mca046","2703","20mca046");
+if(isset($_POST["submit"]))
+{
+if($con)
+{
+ $name=$_POST["name"];
+ $branch=$_POST["branch"];
+
+$qry="INSERT INTO stu(name,branch) VALUES ('$name', '$branch')";
+
+if(mysqli_query($con, $qry))
+{
+echo "Data inserted successfully<br>";
+}
+}
+
+
+} 
+
+mysqli_close($conn);
+?>
+
+
+
+
+
+</table>
 </body>
 </html>
-
